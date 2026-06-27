@@ -51,19 +51,19 @@ Resposta:
 
 ## 🛠️ Stack
 - Python 3.13
-- scikit-learn (Random Forest)
-- SQLite
-- Flask (API)
-- joblib (serialização)
+- scikit-learn (Random Forest) — treino local
+- **Databricks SQL** — dados e consultas analíticas
+- SQLite — storage local rápido
+- Flask — API REST
 
 ## 📁 Estrutura
 ```
 churn-predictor/
-├── generate_data.py   # Geração de dados simulados
-├── train.py           # Treinamento do modelo
-├── model.pkl          # Modelo treinado
-├── churn.db           # SQLite com dados
-├── api.py             # API Flask standalone
+├── generate_data.py        # Dados simulados (local)
+├── train.py                # Treino Random Forest
+├── databricks_setup.py     # Setup no Databricks SQL
+├── model.pkl               # Modelo treinado
+├── api.py                  # API Flask standalone
 └── README.md
 ```
 
